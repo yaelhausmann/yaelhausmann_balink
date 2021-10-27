@@ -88,8 +88,12 @@
                         success: function (response)
                         {
                             console.log(response)
-
+                           if (response.split("||")[1]=='success'){
                             $(window).attr('location', 'index.php');
+                        }
+                        else{
+                        alert(response.split("||")[1]);
+                    }
                         }
                     });
                 }
